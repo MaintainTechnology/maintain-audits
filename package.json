@@ -1,0 +1,24 @@
+{
+  "name": "maintain-audits",
+  "version": "1.0.0",
+  "description": "Maintain Audits Repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaintainTechnology/maintain-audits.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MaintainTechnology/maintain-audits/issues"
+  },
+  "homepage": "https://github.com/MaintainTechnology/maintain-audits#readme",
+  "dependencies": {
+    "playwright": "^1.61.1"
+  }
+}

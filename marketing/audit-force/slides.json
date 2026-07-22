@@ -1,0 +1,36 @@
+{
+  "size": "1080x1350",
+  "handle": "maintainaudits.com.au",
+  "slides": [
+    { "type": "cover", "bg": "cover", "eyebrow": "Franchise assurance",
+      "headline": "The audit force behind Australia's most trusted franchise networks" },
+
+    { "type": "stat", "bg": "blue-gradient", "kicker": "Proven at scale",
+      "value": "500+", "label": "Franchise audits delivered",
+      "note": "Across Australia's growing franchise networks." },
+
+    { "type": "list", "headline": "Three risks every franchisor carries",
+      "items": [
+        { "title": "Revenue risk", "detail": "Lost income from non-compliant sites." },
+        { "title": "Brand risk", "detail": "Erosion of your franchise's core value." },
+        { "title": "Reputation risk", "detail": "The exposure that keeps franchisors up at night." }
+      ] },
+
+    { "type": "steps", "headline": "Engagement to report in 48 hours",
+      "steps": [
+        "Pre-audit preparation",
+        "On-site or remote assessment",
+        "Analysis of findings",
+        "Full report delivered to your team",
+        "Follow-up on corrective actions"
+      ] },
+
+    { "type": "stat", "bg": "gradient", "kicker": "Independent assurance",
+      "value": "98%", "label": "Of issues detected",
+      "note": "Finds the gaps internal reporting misses." },
+
+    { "type": "cta", "bg": "section", "headline": "Protect your franchise network",
+      "sub": "See what your internal reporting misses, before it costs you.",
+      "action": "Book a consultation", "url": "maintainaudits.com.au" }
+  ]
+}

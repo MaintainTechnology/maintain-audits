@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-07-15T15:59:59.311Z",
+  "projectRoot": "C:\\Users\\dalig\\Desktop\\MaintainTech\\MaintainOrg\\maintain-audits",
+  "structure": {
+    "hasPackageJson": true,
+    "hasTsConfig": false,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1784131199313
+}

@@ -141,3 +141,9 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Claude Code — commit the shared toolbox (.claude/, .mcp.json), keep personal settings local
+.claude/settings.local.json
+# ruflo auto-generated machine state (not source)
+.claude/proven-config.json
+.claude/.proven-config-version

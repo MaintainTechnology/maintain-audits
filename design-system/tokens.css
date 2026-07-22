@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Maintain Audits — Design Tokens (single source of truth)
+   Values extracted from the live site (maintainaudits.com.au CSS variables)
+   and every asset in ../audits. Brand token names (Forge Blue, Assurance
+   Green, Cloud, Signal Green) are preserved from the brand's own definitions.
+   Spec + usage: ../DESIGN.md      Living reference: ./index.html
+   ========================================================================== */
+:root {
+  /* ---- Brand core (canonical — from live-site CSS variables) --------------- */
+  --ma-black:           #101820; /* near-black base                */
+  --ma-black-2:         #0C1319;
+  --ma-black-3:         #1A2330;
+  --ma-forge-blue:      #07272D; /* primary dark surface (signature)*/
+  --ma-blue-deep:       #051F24;
+  --ma-blue-light:      #66A1AB; /* muted teal accent              */
+  --ma-assurance-green: #3DDC84; /* PRIMARY brand green            */
+  --ma-signal-green:    #06F285; /* logo-mark neon / high-energy accent */
+  --ma-green-deep:      #157A40;
+  --ma-green-dark:      #0C4A26;
+  --ma-green-mid:       #348F41; /* solid-fill green (report panels)*/
+  --ma-green-tint-1:    #E5F8EE;
+  --ma-green-tint-2:    #CCEFD3;
+  --ma-cloud:           #F5F5F1; /* off-white paper                */
+  --ma-white:           #FFFFFF;
+
+  /* ---- Ink & neutrals (document / report usage) --------------------------- */
+  --ma-ink:             #1F2D2B; /* body text on light             */
+  --ma-slate:           #64748B; /* muted text on light            */
+  --ma-surface-mint-1:  #F0FBF5;
+  --ma-surface-mint-2:  #EAF7F0;
+
+  /* ---- Text on dark ------------------------------------------------------- */
+  --ma-on-dark:         #FFFFFF;
+  --ma-on-dark-muted:   rgba(255,255,255,0.70); /* --muted  on site */
+  --ma-on-dark-faint:   rgba(255,255,255,0.55); /* --muted-2 on site */
+
+  /* ---- Semantic roles (build against these, not raw brand vars) ----------- */
+  --color-bg:           var(--ma-forge-blue);
+  --color-bg-deep:      var(--ma-black);
+  --color-surface:      var(--ma-white);
+  --color-surface-soft: var(--ma-cloud);
+  --color-text:         var(--ma-ink);
+  --color-text-muted:   var(--ma-slate);
+  --color-primary:      var(--ma-assurance-green);
+  --color-primary-ink:  var(--ma-forge-blue);   /* text/icon on green */
+  --color-accent:       var(--ma-signal-green);
+  --color-line:         rgba(255,255,255,0.10);  /* hairline on dark */
+  --color-line-light:   rgba(7,39,45,0.12);      /* hairline on light */
+
+  /* ---- Audit severity (from report status colors) ------------------------- */
+  --sev-pass-fg:    #0C4A26; --sev-pass-bg:    #E5F8EE;
+  --sev-low-fg:     #1E40AF; --sev-low-bg:     #DBEAFE; /* bg inferred */
+  --sev-medium-fg:  #854D0E; --sev-medium-bg:  #FEF9C3;
+  --sev-high-fg:    #9A3412; --sev-high-bg:    #FFEDD5;
+  --sev-critical-fg:#991B1B; --sev-critical-bg:#FEE2E2;
+
+  /* ---- Typography --------------------------------------------------------- */
+  --font-display: 'Albert Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-social:  'Vela Sans', var(--font-display); /* social-graphic alternate */
+  --tracking-display: -0.02em;
+  --tracking-tight:   -0.01em;
+  --leading-display:  1.05;
+  --leading-body:     1.6;
+
+  --text-display: clamp(2.75rem, 6vw, 4.5rem);
+  --text-h1:      clamp(2rem, 4vw, 3rem);
+  --text-h2:      clamp(1.5rem, 3vw, 2rem);
+  --text-h3:      1.375rem;
+  --text-h4:      1.125rem;
+  --text-body-lg: 1.125rem;
+  --text-body:    1rem;
+  --text-sm:      0.875rem;
+  --text-xs:      0.75rem;
+  --text-overline:0.6875rem;
+
+  /* ---- Spacing (4px base) ------------------------------------------------- */
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+  --space-5:1.5rem; --space-6:2rem;  --space-7:3rem;   --space-8:4rem;
+  --space-9:6rem;   --space-10:8rem;
+
+  /* ---- Radius ------------------------------------------------------------- */
+  --radius-sharp:0; --radius-sm:6px; --radius-md:10px; --radius-lg:16px;
+  --radius-xl:24px; --radius-pill:999px;
+
+  /* ---- Elevation & glow --------------------------------------------------- */
+  --shadow-sm:0 1px 2px rgba(7,39,45,.08);
+  --shadow-md:0 6px 20px rgba(7,39,45,.12);
+  --shadow-lg:0 20px 50px rgba(5,31,36,.35);
+  --glow-green:0 0 40px rgba(61,220,132,.25);
+
+  /* ---- Signature background system --------------------------------------- */
+  --grid-line: rgba(61,220,132,0.05);
+  --grid-size: 40px;
+
+  /* ---- Motion ------------------------------------------------------------- */
+  --dur-fast:120ms; --dur-base:200ms; --dur-slow:320ms;
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+
+  /* ---- z-index scale ------------------------------------------------------ */
+  --z-dropdown:1000; --z-sticky:1100; --z-modal-backdrop:1200;
+  --z-modal:1300; --z-toast:1400; --z-tooltip:1500;
+}
+
+/* ---- Signature utilities (reuse everywhere the brand needs its texture) --- */
+.ma-grid-bg{
+  background-color:var(--ma-forge-blue);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size:var(--grid-size) var(--grid-size);
+}
+.ma-glow{ background-image:radial-gradient(60% 60% at 70% 18%, rgba(61,220,132,.18), transparent 70%); }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{ animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; scroll-behavior:auto!important; }
+}
